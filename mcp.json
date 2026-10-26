@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-pqc-multisig-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHPQC"
+      },
+      "tools": [
+        {
+          "name": "verify_bchpqc_invariants",
+          "description": "Verifies deterministic invariants for BCH PQC MultiSig AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchpqc_action",
+          "description": "Executes authenticated Security state transition."
+        }
+      ]
+    }
+  }
+}
